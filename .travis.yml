@@ -5,7 +5,7 @@ services:
 before_install:
   - docker build -t mariov/docker-react -f Dockerfile.dev .
 
-  script:
+script:
   - docker run -e CI=true mariov/docker-react npm run test -- --coverage
 
   # language: generic 
